@@ -8,23 +8,27 @@ import { ColorContext, ColorProvider } from './context/ColorContext';
 import About from './Pages/about';    
 import Contact from './Pages/contact';
 import Form from './Pages/form';
+import favicon from './assets/favicon.svg';
 
 function AppContent() {
-  const { bgColor } = useContext(ColorContext);
+  const { bg } = useContext(ColorContext);
 
   return (
-    <div className="App" style={{ backgroundColor: bgColor, minHeight: '100vh', transition: 'background-color 0.3s ease', paddingBottom: '100px' }}>
+    <div className="App" style={{ backgroundImage: `linear-gradient(rgba(100, 96, 96, 0.4), rgba(0,0,0,0.4)), url(${bg.value})`,
+                                  backgroundSize: 'cover',
+                                  backgroundPosition: 'center',
+                                  backgroundRepeat: 'no-repeat',
+                                  minHeight: '100vh',
+                                  transition: 'background 0.3s ease',
+                                  paddingBottom: '100px',}}>
       <Navbar />
       <Routes>
-        <Route path="/" element={<h1>Home Page</h1>} />
+        <Route path="/" element={<h1>Home Page</h1> } />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/form" element={<Form />} />
       </Routes>
-      <main style={{ padding: '20px' }}>
-        <h1>Welcome to my App</h1>
-        <p>This is the main content area.</p>
-      </main>
+      <img src = {favicon} className = "App-logo" alt="logo" />
       <ThemeButtons />
     </div>
   );

@@ -1,22 +1,21 @@
 import { createContext, useState } from 'react';
-
+import bg1 from '../assets/bg1.avif';
+import bg2 from '../assets/bg2.jpg';
+import bg3 from '../assets/bg3.jpg';
 export const ColorContext = createContext();
 
 export function ColorProvider({ children }) {
-  const [bgColor, setBgColor] = useState('#030303');
+  // const [bgColor, setBgColor] = useState('#030303');
+  const [bg, setBg] = useState('#030303');
 
-  const colors = [
-    { name: 'White', value: '#0d0d0d' },
-    { name: 'Light Blue', value: '#1a1a1a' },
-    { name: 'Light Red', value: '#0d1b2a' },
-    { name: 'Light Green', value: '#1f2937' },
-    { name: 'Light Pink', value: '#2d1b4e' },
-    { name: 'Light Yellow', value: '#0f0f1e' },
-    { name: 'Light Purple', value: '#2a2a3e' },
-  ];
+const themes = [
+  { name: 'Yellow Theme', value: bg1},
+  { name: 'Purple Theme', value: bg2},
+  { name: 'Green Theme', value: bg3},
+];
 
   return (
-    <ColorContext.Provider value={{ bgColor, setBgColor, colors }}>
+    <ColorContext.Provider value={{ bg, setBg, themes }}>
       {children}
     </ColorContext.Provider>
   );

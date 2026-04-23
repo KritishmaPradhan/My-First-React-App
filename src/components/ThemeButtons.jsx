@@ -3,18 +3,22 @@ import { ColorContext } from '../context/ColorContext';
 import './ThemeButtons.css';
 
 const ThemeButtons = () => {
-  const { bgColor, setBgColor, colors } = useContext(ColorContext);
+  const { bg, setBg, themes } = useContext(ColorContext);
 
   return (
     <div className="theme-buttons-container">
       <div className="theme-buttons">
-        {colors.map((color) => (
+        {themes.map((theme) => (
           <button
-            key={color.value}
-            className={`theme-btn ${bgColor === color.value ? 'active' : ''}`}
-            style={{ backgroundColor: color.value }}
-            onClick={() => setBgColor(color.value)}
-            title={color.name}
+            key={theme.name}
+            style={{
+              backgroundImage: `url(${theme.value})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+            className={`theme-btn ${bg.value === theme.value ? 'active' : ''}`}
+            onClick={() => setBg(theme)}
+            title={theme.name}
           />
         ))}
       </div>
