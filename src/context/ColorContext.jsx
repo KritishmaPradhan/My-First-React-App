@@ -6,7 +6,7 @@ export const ColorContext = createContext();
 
 export function ColorProvider({ children }) {
   // const [bgColor, setBgColor] = useState('#030303');
-  const [bg, setBg] = useState('#030303');
+  const [bg, setBg] = useState('black');
 
 const themes = [
   { name: 'Yellow Theme', value: bg1},

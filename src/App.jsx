@@ -8,6 +8,7 @@ import { ColorContext, ColorProvider } from './context/ColorContext';
 import About from './Pages/about';    
 import Contact from './Pages/contact';
 import Form from './Pages/form';
+import AISakura from './Pages/AISakura';
 import favicon from './assets/favicon.svg';
 
 function AppContent() {
@@ -27,6 +28,7 @@ function AppContent() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/form" element={<Form />} />
+        <Route path="/aisakura" element={<AISakura />} />
       </Routes>
       <img src = {favicon} className = "App-logo" alt="logo" />
       <ThemeButtons />
