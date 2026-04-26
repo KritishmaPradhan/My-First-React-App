@@ -22,9 +22,7 @@
 
 .aisakura-header {
   padding: 30px;
-  border-bottom: 1px solid #4a004f;
   text-align: center;
-  background: #2c003e;
 }
 
 .aisakura-header h1 {
@@ -44,17 +42,17 @@
 
 .clear-chat-btn {
   padding: 10px 20px;
-  background: #800080;
   color: white;
-  border: none;
+  background: transparent;
+  border: 1px solid #800080;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .clear-chat-btn:hover {
-  background: #4b004b;
+  box-shadow: 0 0 15px rgba(247, 188, 247, 0.5);
 }
 
 .chat-box {
@@ -98,7 +96,7 @@
 }
 
 .message-bot .message-content {
-  background: linear-gradient(0deg, #043e505c, #04ecf98b);
+  background: linear-gradient(0deg, #043e5037, #04edf935);
   color: #fefefe;
   border-radius: 10px;
   padding: 10px;
@@ -126,18 +124,17 @@
 
 .input-form {
   padding: 20px;
-  border-top: 1px solid #4a004f;
-  background: #2c003e;
 }
 
 .chat-input {
   flex: 1;
   padding: 10px;
-  border: 1px solid #4a004f;
+  border: 1px solid #fbf9fb;
   border-radius: 8px;
   font-size: 14px;
   background: #1a002b;
   color: #d1b3ff;
+  width: 70%;
 }
 
 .chat-input:focus {
@@ -152,8 +149,9 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  margin: 20px;
 }
 
 .send-btn:hover {
-  background: #4b004b;
+  box-shadow: 0 0 15px rgba(247, 188, 247, 0.5);
 }

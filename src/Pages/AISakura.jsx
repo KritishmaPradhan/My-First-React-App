@@ -278,9 +278,6 @@ export default function AISakura() {
         <div className="aisakura-header">
           <h1>✨ AISakura AI Chat</h1>
           <p>Powered by Google Gemini 1.5 Flash (Free Tier)</p>
-          <button onClick={handleClearChat} className="clear-chat-btn">
-            Clear Chat
-          </button>
         </div>
 
         <div className="chat-box">
@@ -327,7 +324,10 @@ export default function AISakura() {
               className="send-btn"
               title={rateLimitWait > 0 ? `Wait ${rateLimitWait}s` : 'Send message'}
             >
-              {isLoading ? '⏳' : rateLimitWait > 0 ? `⏱️${rateLimitWait}s` : '📤'}
+              {isLoading ? '⏳' : rateLimitWait > 0 ? `⏱️${rateLimitWait}s` : 'Send'}
+            </button>
+            <button onClick={handleClearChat} className="clear-chat-btn">
+                Clear Chat
             </button>
           </div>
         </form>

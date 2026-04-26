@@ -12,6 +12,9 @@ const Navbar = () => {
         <li><Link to="/about">About</Link></li>
         <li><Link to="/contact">Contact</Link></li>
         <li><Link to="/form">Get Started</Link></li>
+        <li style={{ background: 'linear-gradient(135deg, #e3f63a, #f312dd)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          <Link to="/aitaro">AITaro Detects</Link>
+        </li>
         <li style={{ background: 'linear-gradient(135deg, #ff00ff, #68c8e6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
           <Link to="/aisakura">Ask AI Sakura</Link>
         </li>
