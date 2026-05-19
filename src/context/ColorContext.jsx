@@ -4,9 +4,10 @@ import bg2 from '../assets/bg2.jpg';
 import bg3 from '../assets/bg3.jpg';
 export const ColorContext = createContext();
 
+const darkGradient = 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)';
+
 export function ColorProvider({ children }) {
-  // const [bgColor, setBgColor] = useState('#030303');
-  const [bg, setBg] = useState('black');
+  const [bg, setBg] = useState(darkGradient);
 
 const themes = [
   { name: 'Yellow Theme', value: bg1},
